@@ -22,11 +22,15 @@ const ProductDetail = ({product, setChangeInCart}) => {
     const handleAddToCart = async(e)=>{
       e.preventDefault()
       try {
-        const res = await axios.post(`${VITE_URL}/cart/add`,{
-          "userId" : user?._id,
-          "productId" : product?._id
-      })
-
+        if(user?._id){
+          const res = await axios.post(`${VITE_URL}/cart/add`,{
+            "userId" : user?._id,
+            "productId" : product?._id
+          })
+        }else{
+          toast("Login to perform this action")
+        }
+       
       if(res.data.success){
         setChangeInCart((prev)=>!prev)
         toast("Item Added To Cart")
