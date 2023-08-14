@@ -27,14 +27,15 @@ const ProductDetail = ({product, setChangeInCart}) => {
             "userId" : user?._id,
             "productId" : product?._id
           })
+          if(res.data.success){
+            setChangeInCart((prev)=>!prev)
+            toast("Item Added To Cart")
+          }
         }else{
           toast("Login to perform this action")
         }
        
-      if(res.data.success){
-        setChangeInCart((prev)=>!prev)
-        toast("Item Added To Cart")
-      }
+      
 
       console.log(res.data)
       } catch (error) {
