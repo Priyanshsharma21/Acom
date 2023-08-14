@@ -2,6 +2,10 @@
 
 This is apprikart shop, an full stack ecommerce website made using MERN stack.
 
+Use Appprikart Shop - https://acom.vercel.app/
+Frontend code - https://github.com/Priyanshsharma21/Acom/blob/master/README.md
+Backend Code - https://github.com/Priyanshsharma21/Acom-Backend/
+
 #Tech Used
 
 ## Frontend - 
